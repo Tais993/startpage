@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Home</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styling/bookmark.css">
+    <link rel="stylesheet" href="styling/to-do-list.css">
+    <link rel="stylesheet" href="styling/documentation.css">
+    <link rel="stylesheet" href="styling/to-watch.css">
+
+    <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+<div id="search">
+    <input id="search-field" type="text" name="search-field" onkeypress="return searchGoogle(event)"/>
+</div>
+<div id="hacks">
+    <div class="to-do-set">
+        <div class="to-do-title">Hacks</div>
+        <div class="to-do-list">
+            <a class="bookmark" href="https://www.youtube.com/channel/UCaZSjarAwZqW4yTEC5Cq9aw" target="_blank">Raven b2's Youtube</a>
+            <a class="bookmark" href="https://vape.gg" target="_blank">Vape client</a>
+            <a class="bookmark" href="https://www.unknowncheats.me/forum/other-fps-games/386931-mp2-scpsl-internal-hack.html" target="_blank">Internal hack</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="to-do-set">
+        <div class="to-do-title">To do list</div>
+        <div class="to-do-list">
+            <a class="bookmark" href="file:///C:/xampp/htdocs/startpage/to-do/Torchcraft-Excel-Mod.html" target="_blank">Learn how to draw lines around a block</a>
+            <a class="bookmark" href="file:///C:/xampp/htdocs/startpage/to-do/Torchcraft-Excel-Mod.html" target="_blank">Make the chest method effective</a>
+            <a class="bookmark" href="https://google.com/" target="_blank">Add a SCP SL documentation homepage</a>
+            <a class="bookmark" href="file:///C:/xampp/htdocs/" target="_blank">Make a homepage for xampp/htdocs</a>
+            <a class="bookmark" href="https://google.com/" target="_blank">Add a Minecraft documentation homepage</a>
+        </div>
+    </div>
+    <div id="clock"></div>
+    <div class="weather-container">
+        <div class="row">
+            <div id="weather-description"class="inline"></div>
+            <div class="inline">-</div>
+            <div id="temp" class="inline"></div>
+        </div>
+    </div>
+    <div class="bookmark-container">
+        <div class="bookmark-set">
+            <div class="bookmark-title">Daily Shit</div>
+            <div class="bookmark-inner-container">
+                <a class="bookmark" href="https://google.com/" target="_blank">Google</a>
+                <a class="bookmark" href="https://www.youtube.com/" target="_blank">Youtube</a>
+                <a class="bookmark" href="https://www.twitch.tv/" target="_blank">Twitch</a>
+                <a class="bookmark" href="https://www.tweakers.net/" target="_blank">Tweakers</a>
+                <a class="bookmark" href="https://github.com/" target="_blank">Github</a>
+            </div>
+        </div>
+        <div class="bookmark-set">
+            <div class="bookmark-title">Projects</div>
+            <div class="bookmark-inner-container">
+                <a class="bookmark" href="https://github.com/Tais993/" target="_blank">Tais993</a>
+                <a class="bookmark" href="https://github.com/Tais993/TaisDiscordBot" target="_blank">Tais Discord bot</a>
+                <a class="bookmark" href="https://github.com/Tais993/TorchCraftExcelMod" target="_blank">TorchCraft Excel Mod</a>
+            </div>
+        </div>
+        <div class="bookmark-set">
+            <div class="bookmark-title">Tools</div>
+            <div class="bookmark-inner-container">
+                <a class="bookmark" href="https://github.com/sherlock-project/sherlock" target="_blank">Sherlock</a>
+                <a class="bookmark" href="https://github.com/KoukoCocoa/SCPSLSettingChanger/releases/tag/V1.2.2.1" target="_blank">SCPSL Settings Changer</a>
+                <a class="bookmark" href="https://github.com/lXxMangoxXl/EnableLightRendering/releases" target="_blank">Enable Light Rendering</a>
+            </div>
+        </div>
+        <div class="bookmark-set">
+            <div class="bookmark-title">Open</div>
+            <div class="bookmark-inner-container">
+                <a class="bookmark" href="https://minecraft.gamepedia.com/Debug_screen" target="_blank">Minecraft Debug Screen</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-documentation-to-watch">
+        <div class="documentation">
+            <div class="documentation-title"> Documentation </div>
+            <div class="documentation-list">
+                <a class="bookmark" href="https://google.com/" target="_blank">SCP SL documentation</a>
+                <a class="bookmark" href="https://google.com/" target="_blank">Minecraft documentation</a>
+                <a class="bookmark" href="https://google.com/" target="_blank"></a>
+            </div>
+        </div>
+        <div class="to-watch">
+            <div class="to-watch-title"> To watch </div>
+            <div class="to-watch-list">
+                <a class="bookmark" href="https://www.youtube.com/watch?v=kot131zufIQ" target="_blank">Null keyword</a>
+                <a class="bookmark" href="https://www.youtube.com/watch?v=bLGzEqd-ELM" target="_blank">Finally keyword</a>
+                <a class="bookmark" href="https://www.youtube.com/watch?v=730BMKm4qYM" target="_blank">Final keyword</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    // * Search on enter key event
+    function searchGoogle(e) {
+        if (e.keyCode == 13) {
+            var val = document.getElementById("search-field").value;
+
+            while (val.startsWith(" ")) {
+                val = val.replace(" ", "");
+            }
+
+            val = val.replace(" ", "%20")
+
+            if (val.startsWith("y-")) {
+                val = val.replace("y-", "");
+                window.open("https://www.youtube.com/results?q=" + val);
+            } else if (val.startsWith("b-")) {
+                val = val.replace("b-", "");
+                window.open("https://bing.com/search?q=" + val);
+            } else if (val.startsWith("d-")) {
+                val = val.replace("d-", "");
+                window.open("https://duckduckgo.com/?q=" + val);
+            } else if (val.startsWith("k-")) {
+                window.open("https://www.kinderfeestuden.nl/");
+            } else {
+                window.open("https://google.com/search?q=" + val);
+            }
+        }
+    }
+
+    // * Get current time and format
+    function getTime() {
+        let date = new Date(),
+            min = date.getMinutes(),
+            sec = date.getSeconds(),
+            hour = date.getHours();
+
+        return "" +
+            (hour < 10 ? ("0" + hour) : hour) + ":" +
+            (min < 10 ? ("0" + min) : min) + ":" +
+            (sec < 10 ? ("0" + sec) : sec);
+    }
+
+    window.onload = () => {
+        // ! Weather is pretty bugged, wrong location
+        let xhr = new XMLHttpRequest();
+        // * Request to open weather map
+        xhr.open('GET', 'http://api.openweathermap.org/data/2.5/weather?id=4737316&units=imperial&appid=e5b292ae2f9dae5f29e11499c2d82ece');
+        xhr.onload = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    let json = JSON.parse(xhr.responseText);
+                    console.log(json);
+                    document.getElementById("temp").innerHTML = json.main.temp.toFixed(0) + " F";
+                    document.getElementById("weather-description").innerHTML = json.weather[0].description;
+                } else {
+                    console.log('error msg: ' + xhr.status);
+                }
+            }
+        }
+        xhr.send();
+        // * Set up the clock
+        document.getElementById("clock").innerHTML = getTime();
+        // * Set clock interval to tick clock
+        setInterval( () => {
+            document.getElementById("clock").innerHTML = getTime();
+        }, 100);
+    }
+
+    document.addEventListener("keydown", event => {
+        switch (event.keyCode) {
+            case 32:
+                // * Spacebar code to open search
+                document.getElementById('search').style.display = 'flex';
+                document.getElementById('search-field').focus();
+                break;
+            case 27:
+                // * Esc to close search
+                document.getElementById('search-field').value = '';
+                document.getElementById('search-field').blur();
+                document.getElementById('search').style.display = 'none';
+                document.getElementById('hacks').style.display = 'none';
+                break;
+            case 16:
+                console.log(document.getElementById(`hacks`).style.display);
+                console.log(document.getElementById(`search`).style.display);
+                if (document.getElementById(`search`).style.display === 'none') {
+                    document.getElementById('hacks').style.display = 'flex';
+                }
+        }
+    });
+</script>
+</body>
+</html>

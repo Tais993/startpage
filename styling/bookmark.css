@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+:root {
+    --bg: #5f4b8b;
+    --fg: #ffffff;
+    --secondaryFg: #b3b3b3;
+    --containerBg: #272727;
+    --searchBg: var(--containerBg);
+    --scrollbarColor: #3f3f3f;
+}
+
+.bookmark-set {
+    padding: 1em;
+    background-color: var(--containerBg);
+    border-radius: 3px;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 0.85rem;
+    width: 25%;
+    height: 15em;
+    margin: 0 0.5em;
+    box-sizing: border-box;
+}
+
+.bookmark-inner-container {
+    overflow-y: scroll;
+    height: 80%;
+    vertical-align: top;
+    padding-right: 6px;
+    box-sizing: border-box;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbarColor) #ffffff00;
+}
+
+.bookmark-inner-container::-webkit-scrollbar {
+    width: 6px;
+}
+.bookmark-inner-container::-webkit-scrollbar-track {
+    background: #ffffff00;
+}
+.bookmark-inner-container::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbarColor);
+    border-radius: 6px;
+    border: 3px solid #ffffff00;
+}
+
+.bookmark-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--fg);
+    margin: 0 0 0.35em 0;
+}
+.bookmark {
+    text-decoration: none;
+    color: var(--secondaryFg);
+    display: block;
+    margin: 0.5em 0;
+}
+.bookmark:hover {
+    color: var(--fg);
+}

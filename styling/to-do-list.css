@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+:root {
+    --bg: #5f4b8b;
+    --fg: #ffffff;
+    --secondaryFg: #b3b3b3;
+    --containerBg: #272727;
+    --searchBg: var(--containerBg);
+    --scrollbarColor: #3f3f3f;
+}
+
+.to-do-set {
+    padding: 1em;
+    background-color: var(--containerBg);
+    border-radius: 3px;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 0.85rem;
+    width: 60%;
+    height: 15em;
+    margin: 3em 0.5em 5em 0.5em;
+    box-sizing: border-box;
+}
+
+.to-do-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--fg);
+    margin: 0 0 0.35em 0;
+}
+
+.to-do-list {
+    overflow-y: scroll;
+    height: 80%;
+    vertical-align: top;
+    padding-right: 6px;
+    box-sizing: border-box;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbarColor) #ffffff00;
+}
+
+.to-do-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.to-do-list::-webkit-scrollbar-track {
+    background: #ffffff00;
+}
+
+.to-do-list::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbarColor);
+    border-radius: 6px;
+    border: 3px solid #ffffff00;
+}

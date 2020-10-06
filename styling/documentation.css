@@ -1,0 +1,43 @@
+.documentation {
+    padding: 1em;
+    background-color: var(--containerBg);
+    border-radius: 3px;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 0.85rem;
+    width: 80%;
+    height: 12em;
+    margin: 0 0.5em 5em 0.5em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.documentation-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--fg);
+    margin: 0 0 0.35em 0;
+}
+
+.documentation-list {
+    overflow-y: scroll;
+    height: 60%;
+    vertical-align: top;
+    padding-right: 6px;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbarColor) #ffffff00;
+}
+
+.documentation-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.documentation-list::-webkit-scrollbar-track {
+    background: #ffffff00;
+}
+
+.documentation-list::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbarColor);
+    border-radius: 6px;
+    border: 3px solid #ffffff00;
+}
